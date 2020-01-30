@@ -69,6 +69,7 @@
               value="Next"
               class="form-control btn btn-primary"
               onclick="SaveAndGo()"
+              id="locationButtonId"
             />
           </form>
         </div>
@@ -79,6 +80,7 @@
       function SaveAndGo() {
         var location = document.getElementById("locationId").value;
         sessionStorage.setItem("location", location); //the second name is the variable name...
+        window.location.href = "driverName.html";
       }
     </script>
   </body>
