@@ -217,5 +217,13 @@
       document.getElementById("payloadWeightId").value = payloadWeightVal;
       document.getElementById("wayBillNumberId").value = wayBIllNumberVal;
     </script>
+    <script>
+      var cancelButton = document.getElementById("cancelButtonId");
+      cancelButton.onclick = callLocation;
+      function callLocation() {
+        //alert("Picking");
+        window.location.href = "location.html";
+      }
+    </script>
   </body>
 </html>

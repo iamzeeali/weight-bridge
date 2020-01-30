@@ -51,9 +51,21 @@
     </nav>
     <div class="container py-5">
       <p class="lead">Reporting Completed Successfully!</p>
-      <a href="location.html" class="btn btn-primary btn-block"
-        >Start Reporting Again</a
-      >
+      <input
+        type="button"
+        value="Start Reporting Again"
+        id="StartAgainBtnId"
+        class="btn btn-primary btn-block"
+      />
     </div>
+
+    <script>
+      var startAgain = document.getElementById("StartAgainBtnId");
+      startAgain.onclick = callLocation;
+      function callLocation() {
+        //alert("Picking");
+        window.location.href = "location.html";
+      }
+    </script>
   </body>
 </html>
