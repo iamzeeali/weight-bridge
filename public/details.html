@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/lux/bootstrap.min.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <title>Details</title>
+  </head>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Weight Bridge Reporting System</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-sm-6">
+          <p class="lead text-center">Report Details</p>
+          <form action="/transaction" method="POST">
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Location</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="location"
+                  id="locationId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Driver Name</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="driverName"
+                  id="driverNameId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Driver GSM</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="driverGsm"
+                  id="driverGsmId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Prime Mover No</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="primeMoverNumber"
+                  id="primeMoverNumberId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Trailer No</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="trailerNumber"
+                  id="trailerNumberId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Trailer Capacity</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="trailerCapacity"
+                  id="trailerCapacityId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Empty Wt</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="emptyWeight"
+                  id="emptyWeightId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Loaded Wt</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="loadedWeight"
+                  id="loadedWeightId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Payload Wt</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="payloadWeight"
+                  id="payloadWeightId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Way Bill No</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  name="wayBillNumber"
+                  id="wayBillNumberId"
+                  class="form-control form-control-sm"
+                />
+              </div>
+            </div>
+
+            <br />
+            <input
+              type="submit"
+              value="Submit"
+              id="submitButtonId"
+              class="btn btn-primary btn-block"
+            />
+            <input
+              type="button"
+              value="Cancel"
+              id="cancelButtonId"
+              class="btn btn-primary btn-block"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let locationVal = sessionStorage.getItem("location");
+      let driverNameVal = sessionStorage.getItem("driverName");
+      let driverGsmVal = sessionStorage.getItem("driverGsm");
+      let primeMoverNumberVal = sessionStorage.getItem("primeMoverNumber");
+      let trailerNumberVal = sessionStorage.getItem("trailerNumber");
+      let trailerCapacityVal = sessionStorage.getItem("trailerCapacity");
+      let emptyWeightVal = sessionStorage.getItem("emptyWeight");
+      let loadedWeightVal = sessionStorage.getItem("loadedWeight");
+      let payloadWeightVal = sessionStorage.getItem("payloadWeight");
+      let wayBIllNumberVal = sessionStorage.getItem("wayBillNumber");
+
+      document.getElementById("locationId").value = locationVal;
+      document.getElementById("driverNameId").value = driverNameVal;
+      document.getElementById("driverGsmId").value = driverGsmVal;
+      document.getElementById("primeMoverNumberId").value = primeMoverNumberVal;
+      document.getElementById("trailerNumberId").value = trailerNumberVal;
+      document.getElementById("trailerCapacityId").value = trailerCapacityVal;
+      document.getElementById("emptyWeightId").value = emptyWeightVal;
+      document.getElementById("loadedWeightId").value = loadedWeightVal;
+      document.getElementById("payloadWeightId").value = payloadWeightVal;
+      document.getElementById("wayBillNumberId").value = wayBIllNumberVal;
+    </script>
+  </body>
+</html>
