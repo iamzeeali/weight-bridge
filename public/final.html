@@ -26,37 +26,41 @@
     ></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <!-- Brand -->
-      <img src="logo.png" alt="Globus Labs" width="50%" class="p-0" />
-
-      <!-- Navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-      </ul>
-    </nav>
-
     <div class="container py-2">
-      <p class="lead text-center text-light p-2 bg-primary">
-        Weight Bridge Reporting System
-      </p>
-      <p class="lead text-center">Reported Successfully!</p>
-      <img src="wb.jpg" alt="Weight Bridge" width="100%" class="pb-2" />
+      <div class="row">
+        <div class="col-sm-4">
+          <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <!-- Brand -->
+            <!-- <a class="navbar-brand" href="#">Globus Labs</a> -->
+            <img src="logo.png" alt="Globus Labs" width="50%" class="p-0" />
 
-      <input
-        type="button"
-        value="Start Reporting Again"
-        id="StartAgainBtnId"
-        class="btn btn-primary btn-block"
-      />
-      <input
-        type="button"
-        value="Exit"
-        class="form-control form-control-lg btn btn-primary my-1"
-        id="exitBtnId"
-      />
+            <!-- Navbar links -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+            </ul>
+          </nav>
+          <p class="lead text-center text-light p-2 bg-primary">
+            Weight Bridge Reporting System
+          </p>
+          <p class="lead text-center">Reported Successfully!</p>
+          <img src="wb.jpg" alt="Weight Bridge" width="100%" class="pb-2" />
+
+          <input
+            type="button"
+            value="Start Reporting Again"
+            id="StartAgainBtnId"
+            class="btn btn-primary btn-block"
+          />
+          <input
+            type="button"
+            value="Exit"
+            class="form-control form-control-lg btn btn-primary my-1"
+            id="exitBtnId"
+          />
+        </div>
+      </div>
     </div>
 
     <script>
