@@ -25,7 +25,7 @@
     ></script>
     <title>Payload Weight</title>
   </head>
-  <body>
+  <body onload="calcPayload()">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <!-- Brand -->
       <!-- <a class="navbar-brand" href="#">Globus Labs</a> -->
@@ -47,14 +47,14 @@
           </p>
           <img src="wb.jpg" alt="Weight Bridge" width="100%" class="pb-2" />
           <form action="wayBillNumber.html" method="GET">
-            <label>Enter Payload Weight:</label>
+            <label>Payload Weight:</label>
             <input
               type="text"
               name="payloadWeight"
               class="form-control form-control-lg"
               id="payloadWeightId"
               required
-              autofocus
+              readonly
             />
             <br />
             <input
@@ -80,7 +80,16 @@
         var payloadWeight = document.getElementById("payloadWeightId").value;
         sessionStorage.setItem("payloadWeight", payloadWeight); //the second name is the variable name...
       }
-
+    </script>
+    <script>
+      function calcPayload() {
+        var emptyWeightVal = sessionStorage.getItem("emptyWeight");
+        var loadedWeightVal = sessionStorage.getItem("loadedWeight");
+        var payloadWeight = loadedWeightVal - emptyWeightVal;
+        document.getElementById("payloadWeightId").value = payloadWeight;
+      }
+    </script>
+    <script>
       var backButton = document.getElementById("backBtnId");
       backButton.onclick = callPrevious;
       function callPrevious() {
