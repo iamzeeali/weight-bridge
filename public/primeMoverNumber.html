@@ -63,6 +63,12 @@
               class="form-control form-control-lg btn btn-primary"
               onclick="SaveAndGo()"
             />
+            <input
+              type="button"
+              value="Back"
+              class="form-control form-control-lg btn btn-primary my-1"
+              id="backBtnId"
+            />
           </form>
         </div>
       </div>
@@ -73,6 +79,12 @@
         var primeMoverNumber = document.getElementById("primeMoverNumberId")
           .value;
         sessionStorage.setItem("primeMoverNumber", primeMoverNumber); //the second name is the variable name...
+      }
+
+      var backButton = document.getElementById("backBtnId");
+      backButton.onclick = callPrevious;
+      function callPrevious() {
+        window.location.href = "driverGsm.html";
       }
     </script>
   </body>

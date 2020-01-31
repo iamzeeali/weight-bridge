@@ -64,6 +64,12 @@
               onclick="SaveAndGo()"
               id="trailerCapacityButtonId"
             />
+            <input
+              type="button"
+              value="Back"
+              class="form-control form-control-lg btn btn-primary my-1"
+              id="backBtnId"
+            />
           </form>
         </div>
       </div>
@@ -74,6 +80,11 @@
         var trailerCapacity = document.getElementById("trailerCapacityId")
           .value;
         sessionStorage.setItem("trailerCapacity", trailerCapacity); //the second name is the variable name...
+      }
+      var backButton = document.getElementById("backBtnId");
+      backButton.onclick = callPrevious;
+      function callPrevious() {
+        window.location.href = "trailerNumber.html";
       }
     </script>
   </body>

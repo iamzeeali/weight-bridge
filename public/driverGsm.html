@@ -63,6 +63,12 @@
               class="form-control form-control-lg btn btn-primary"
               onclick="SaveAndGo()"
             />
+            <input
+              type="button"
+              value="Back"
+              class="form-control form-control-lg btn btn-primary my-1"
+              id="backBtnId"
+            />
           </form>
         </div>
       </div>
@@ -72,6 +78,12 @@
       function SaveAndGo() {
         var driverGsm = document.getElementById("driverGsmId").value;
         sessionStorage.setItem("driverGsm", driverGsm); //the second name is the variable name...
+      }
+
+      var backButton = document.getElementById("backBtnId");
+      backButton.onclick = callPrevious;
+      function callPrevious() {
+        window.location.href = "driverName.html";
       }
     </script>
   </body>

@@ -64,6 +64,12 @@
               onclick="SaveAndGo()"
               id="wayBillNumberBtnId"
             />
+            <input
+              type="button"
+              value="Back"
+              class="form-control form-control-lg btn btn-primary my-1"
+              id="backBtnId"
+            />
           </form>
         </div>
       </div>
@@ -73,6 +79,12 @@
       function SaveAndGo() {
         var wayBillNumber = document.getElementById("wayBillNumberId").value;
         sessionStorage.setItem("wayBillNumber", wayBillNumber); //the second name is the variable name...
+      }
+
+      var backButton = document.getElementById("backBtnId");
+      backButton.onclick = callPrevious;
+      function callPrevious() {
+        window.location.href = "payloadWeight.html";
       }
     </script>
   </body>

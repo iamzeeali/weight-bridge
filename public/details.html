@@ -172,13 +172,19 @@
               type="submit"
               value="Submit"
               id="submitButtonId"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block btn-lg"
+            />
+            <input
+              type="button"
+              value="Back"
+              id="backBtnId"
+              class="btn btn-primary btn-block btn-lg"
             />
             <input
               type="button"
               value="Cancel"
               id="cancelButtonId"
-              class="btn btn-primary btn-block"
+              class="btn btn-primary btn-block btn-lg"
             />
           </form>
         </div>
@@ -214,6 +220,12 @@
       function callLocation() {
         //alert("Picking");
         window.location.href = "location.html";
+      }
+
+      var backButton = document.getElementById("backBtnId");
+      backButton.onclick = callPrevious;
+      function callPrevious() {
+        window.location.href = "wayBillNumber.html";
       }
     </script>
   </body>
