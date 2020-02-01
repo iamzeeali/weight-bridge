@@ -46,15 +46,16 @@
           </p>
           <img src="wb.jpg" alt="Weight Bridge" width="100%" class="pb-2" />
           <form action="wayBillNumber.html" method="GET">
-            <label>Payload Weight:</label>
+            <p class="text-center">Payload Weight:</p>
             <input
-              type="text"
+              type="hidden"
               name="payloadWeight"
               class="form-control form-control-lg"
               id="payloadWeightId"
               required
               readonly
             />
+            <h2 id="payloadWeightId2" class="text-center"></h2>
             <br />
             <input
               type="submit"
@@ -86,6 +87,7 @@
         var loadedWeightVal = sessionStorage.getItem("loadedWeight");
         var payloadWeight = loadedWeightVal - emptyWeightVal;
         document.getElementById("payloadWeightId").value = payloadWeight;
+        document.getElementById("payloadWeightId2").innerHTML = payloadWeight;
       }
     </script>
     <script>
