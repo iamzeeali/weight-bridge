@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://bootswatch.com/4/simplex/bootstrap.min.css"
     />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -44,6 +48,7 @@
           <p class="lead text-center text-light p-2 bg-primary">
             Weight Bridge Reporting System
           </p>
+          <i class="fa fa-calendar text-secondary" id="dataTimeId"> </i>
           <img src="wb.jpg" alt="Weight Bridge" width="100%" class="pb-2" />
           <form action="details.html" method="GET">
             <label>Enter Way Bill Number:</label>
@@ -85,6 +90,21 @@
       function callPrevious() {
         window.location.href = "payloadWeight.html";
       }
+
+      var currentdate = new Date();
+      var datetime =
+        +currentdate.getDate() +
+        "/" +
+        (currentdate.getMonth() + 1) +
+        "/" +
+        currentdate.getFullYear() +
+        " - " +
+        currentdate.getHours() +
+        ":" +
+        currentdate.getMinutes() +
+        ":" +
+        currentdate.getSeconds();
+      document.getElementById("dataTimeId").innerHTML = datetime;
     </script>
   </body>
 </html>
